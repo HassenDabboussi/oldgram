@@ -17,7 +17,7 @@ const posts = [
         comment: "i'm feelin a bit stressed tbh",
         likes: 4
     },
-        {
+    {
         name: "Joseph Ducreux",
         username: "jd1735",
         location: "Paris, France",
@@ -50,7 +50,7 @@ function renderPost() {
                 </div>
             </div>
             <div class="post-content">
-                <img src="${posts[i].post}" alt="famous van gogh tableau" class="post" id="post">
+                <img src="${posts[i].post}" alt="famous van gogh tableau" class="post" data-index="${i}">
             </div>
             <div class="post-interactions">
                 <div>
@@ -58,11 +58,20 @@ function renderPost() {
                     <img src="img/icon-comment.png" alt="" class="icon">
                     <img src="img/icon-dm.png" alt="" class="icon">
                 </div>
-                <p class="text-accent" id="likes">${posts[i].likes} likes</p>
+                <p class="text-accent likes" data-index="${i}">${posts[i].likes} likes</p>
                 <p><span class="text-accent" id="username">${posts[i].username}</span> <span id="comment">${posts[i].comment}</span></p>
             </div>
         `
     }
 }
+
+postSectionEl.addEventListener("dblclick", function(event){
+    if(event.target.classList.contains('post')){
+        const index = event.target.dataset.index;
+        posts[index].likes++;
+        const likesEl = document.querySelector(`.likes[data-index="${index}"]`);
+        likesEl.textContent = `${posts[index].likes} likes`;
+    }
+})
 
 renderPost();

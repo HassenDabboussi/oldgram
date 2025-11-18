@@ -19,7 +19,8 @@ body {
 }
 
 .main-container {
-    border: 2px dotted black;
+    /*border: 2px dotted black;*/
+    border: 2px solid black;
     min-height: 100vh;
     width: 25vw;
     margin: 0 auto;
@@ -33,12 +34,12 @@ header {
     align-items: center;
     height: 10vh;
     padding: 0 10px;
-    border: 2px dotted red;
+    /*border: 2px dotted red;*/
 }
 
 .post-owner-section{
     height: 10vh;
-    border: 2px dotted black;
+    /*border: 2px dotted black;*/
     display: flex;
     justify-content: start;
 }
@@ -50,7 +51,7 @@ header {
     height: 10vh;
     min-width: 11.5vw;
     padding: 0 0 0 10px;
-    border: 2px dotted red;
+    /*border: 2px dotted red;*/
     font-size: 12px;
 }
 
@@ -60,23 +61,23 @@ header {
 }
 
 .post-content {
-    height: 55.8vh;
-    border: 2px dotted red ;
+    height: 56vh;
+    /*border: 2px dotted red;*/
 }
 
 .post {
-    width: 335px;
+    width: 337.5px;
 }
 
 .post-interactions {
     height: 20vh;
-    border: 2px dotted blue;
+    /*border: 2px dotted blue;*/
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     padding-left: 10px;
     font-size: 12px;
-    margin-bottom: 4.2vh;
+    margin-bottom: 4vh;
 }
 
 .icon {
